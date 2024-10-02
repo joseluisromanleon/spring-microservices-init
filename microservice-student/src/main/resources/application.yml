@@ -1,0 +1,11 @@
+# Nombre de la aplicaci�n Spring Boot
+# spring.application.name=students
+
+
+spring:
+  application:
+    name: msvc-student
+  # Configuraci�n opcional en esta ruta encuentras el arrancador de las aplicaciones Spring Boot
+  # nivel application
+  config:
+    import: "optional:configserver:http://localhost:8888"

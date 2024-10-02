@@ -1,0 +1,13 @@
+# Nombre de la aplicación Spring Boot
+# spring.application.name=microservice-course
+
+# Puerto en el que trabajará o funcionará el microservicio course.
+server:
+  port: 9090
+
+spring:
+  application:
+    name: msvc-course
+
+  config:
+    import: "optional:configserver:http://localhost:8888"

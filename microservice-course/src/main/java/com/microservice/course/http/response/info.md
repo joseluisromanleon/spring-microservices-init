@@ -1,0 +1,1 @@
+aqui se crea la clase que va a mapear la respuesta que recibiremos del microservicio student

@@ -1,0 +1,37 @@
+# Nombre de la aplicaci�n Spring Boot
+# spring.application.name=students
+
+# Puerto en el que trabajar� o funcionar� el microservice.
+server:
+  port: 8090
+
+spring:
+  application:
+    name: msvc-student
+
+  # Configuraci�n de la DDBB ojo con la tabulaci�n con application - para springData
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/studentsDb
+    # ? createDatabaseIfNotExist=true
+    username: root
+    password: 1234
+
+
+  # Configuraci�n de JPA para la base de datos ojo tabulaci�n
+  jpa:
+    hibernate:
+      ddl-auto: create
+    # autogen�rate de tablas cuando se levanta la aplicaci�n
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+
+
+# Configuraci�n para conexi�n autom�ticamente en Eureka
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: "http://localhost:8761/eureka"

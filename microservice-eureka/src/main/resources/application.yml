@@ -1,0 +1,11 @@
+# Configuración del Servidor con atributo port  Puerto por defecto de Eureka
+
+
+# Configuración de Spring Boot
+spring:
+  application:
+    name: msvc-eureka
+  # configuración opcional en esta ruta encuentras el arrancador de las aplicaciones springboot (por ahora esto es suficiente)
+  # Hay que configurar el config server.....
+  config:
+    import: "optional:configserver:http://localhost:8888"
